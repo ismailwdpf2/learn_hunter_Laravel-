@@ -29,14 +29,23 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-// Route::get('test', function(){
-// return view('test');
-// });
+
+//4 way to route>>>>>>
+Route::get('test', function(){
+return view('test');
+});
 Route::get('test1',function(){
 return 'im ismail';
 });
 Route::view('test2', 'test');
 
 Route::get('/test3',[TestController::class, 'index']);
+
+Route::get('about', function(){
+    return view('layouts.about');
+    });
+Route::get('/contact', function(){
+    return view ("layouts.contact");
+});
 
 require __DIR__.'/auth.php';
