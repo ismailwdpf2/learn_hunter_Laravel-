@@ -47,5 +47,8 @@ Route::get('about', function(){
 Route::get('/contact', function(){
     return view ("layouts.contact");
 });
+Route::get('/servies', function(){
+    return view ("layouts.servies");
+});
 
 require __DIR__.'/auth.php';
