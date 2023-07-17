@@ -28,7 +28,10 @@
                         <a href="{{url('about')}}">About</a>
                     </li>
                     <li>
-                        <a href="{{url('contact')}}">Contact</a>
+                        <a href="{{route('contact')}}">Contact</a>
+                    </li>
+                    <li>
+                        <a href="{{url('servies')}}">Servies</a>
                     </li>
                 </ul>
             </div>

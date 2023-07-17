@@ -31,24 +31,33 @@ Route::middleware('auth')->group(function () {
 });
 
 //4 way to route>>>>>>
-Route::get('test', function(){
-return view('test');
+Route::get('test', function () {
+    return view('test');
 });
-Route::get('test1',function(){
-return 'im ismail';
+Route::get('test1', function () {
+    return 'im ismail';
 });
 Route::view('test2', 'test');
 
-Route::get('/test3',[TestController::class, 'index']);
+Route::get('/test3', [TestController::class, 'index']);
 
-Route::get('about', function(){
+Route::get('about', function () {
     return view('layouts.about');
-    });
-Route::get('/contact', function(){
-    return view ("layouts.contact");
-});
-Route::get('/servies', function(){
-    return view ("layouts.servies");
 });
 
-require __DIR__.'/auth.php';
+//name route
+Route::get('/jhkjhkjh', function () {
+    return view("layouts.contact");
+})->name('contact');
+
+//peramitter
+Route::get('/servies/{roll}', function ($roll) {
+    // return view ("layouts.servies");
+    return "my roll is $roll";
+});
+Route::get('country', function () {
+    return view('layouts.country
+    ');
+})->middleware('country');
+
+require __DIR__ . '/auth.php';
