@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Example\FirstController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
@@ -60,4 +61,9 @@ Route::get('country', function () {
     ');
 })->middleware('country');
 
+//first controller use
+Route::get('/FirstController', [FirstController::class,'index']);
+
 require __DIR__ . '/auth.php';
+
+
