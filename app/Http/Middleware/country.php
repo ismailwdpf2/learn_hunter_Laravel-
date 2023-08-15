@@ -17,6 +17,7 @@ class country
     { 
         $array =[
             "bangla",
+            "pakistan",
             "india",
         ];
         if(in_array($request->country, $array)){

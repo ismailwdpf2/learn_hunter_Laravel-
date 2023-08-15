@@ -56,10 +56,9 @@ Route::get('/servies/{roll}', function ($roll) {
     // return view ("layouts.servies");
     return "my roll is $roll";
 });
-Route::get('country', function () {
-    return view('layouts.country
-    ');
-})->middleware('country');
+Route::get('/country', [FirstController::class, 'country'])->name('country')->middleware('country');
+  
+
 
 //first controller use
 Route::get('/FirstController', [FirstController::class,'index']);

@@ -10,4 +10,7 @@ class FirstController extends Controller
 public function index(){
  return view('layouts.contact');
 }
+public function country(){
+    return view('layouts.country');
+}
 }
